@@ -1,0 +1,151 @@
+[
+  {
+    "contract": "PausableHarness",
+    "files": [
+      "certora/harnesses/PausableHarness.sol"
+    ],
+    "spec": "Pausable"
+  },
+  {
+    "contract": "AccessControlHarness",
+    "files": [
+      "certora/harnesses/AccessControlHarness.sol"
+    ],
+    "spec": "AccessControl"
+  },
+  {
+    "contract": "AccessControlDefaultAdminRulesHarness",
+    "files": [
+      "certora/harnesses/AccessControlDefaultAdminRulesHarness.sol"
+    ],
+    "spec": "AccessControlDefaultAdminRules"
+  },
+  {
+    "contract": "AccessManagerHarness",
+    "files": [
+      "certora/harnesses/AccessManagerHarness.sol"
+    ],
+    "options": [
+      "--optimistic_hashing",
+      "--optimistic_loop"
+    ],
+    "spec": "AccessManager"
+  },
+  {
+    "contract": "AccessManagedHarness",
+    "files": [
+      "certora/harnesses/AccessManagedHarness.sol",
+      "certora/harnesses/AccessManagerHarness.sol"
+    ],
+    "options": [
+      "--optimistic_hashing",
+      "--optimistic_loop",
+      "--link AccessManagedHarness:_authority=AccessManagerHarness"
+    ],
+    "spec": "AccessManaged"
+  },
+  {
+    "contract": "DoubleEndedQueueHarness",
+    "files": [
+      "certora/harnesses/DoubleEndedQueueHarness.sol"
+    ],
+    "spec": "DoubleEndedQueue"
+  },
+  {
+    "contract": "OwnableHarness",
+    "files": [
+      "certora/harnesses/OwnableHarness.sol"
+    ],
+    "spec": "Ownable"
+  },
+  {
+    "contract": "Ownable2StepHarness",
+    "files": [
+      "certora/harnesses/Ownable2StepHarness.sol"
+    ],
+    "spec": "Ownable2Step"
+  },
+  {
+    "contract": "ERC20PermitHarness",
+    "files": [
+      "certora/harnesses/ERC20PermitHarness.sol"
+    ],
+    "options": [
+      "--optimistic_loop"
+    ],
+    "spec": "ERC20"
+  },
+  {
+    "contract": "ERC20FlashMintHarness",
+    "files": [
+      "certora/harnesses/ERC20FlashMintHarness.sol",
+      "certora/harnesses/ERC3156FlashBorrowerHarness.sol"
+    ],
+    "options": [
+      "--optimistic_loop"
+    ],
+    "spec": "ERC20FlashMint"
+  },
+  {
+    "contract": "ERC20WrapperHarness",
+    "files": [
+      "certora/harnesses/ERC20PermitHarness.sol",
+      "certora/harnesses/ERC20WrapperHarness.sol"
+    ],
+    "options": [
+      "--link ERC20WrapperHarness:_underlying=ERC20PermitHarness",
+      "--optimistic_loop"
+    ],
+    "spec": "ERC20Wrapper"
+  },
+  {
+    "contract": "ERC721Harness",
+    "files": [
+      "certora/harnesses/ERC721Harness.sol",
+      "certora/harnesses/ERC721ReceiverHarness.sol"
+    ],
+    "options": [
+      "--optimistic_loop"
+    ],
+    "spec": "ERC721"
+  },
+  {
+    "contract": "InitializableHarness",
+    "files": [
+      "certora/harnesses/InitializableHarness.sol"
+    ],
+    "spec": "Initializable"
+  },
+  {
+    "contract": "EnumerableSetHarness",
+    "files": [
+      "certora/harnesses/EnumerableSetHarness.sol"
+    ],
+    "spec": "EnumerableSet"
+  },
+  {
+    "contract": "EnumerableMapHarness",
+    "files": [
+      "certora/harnesses/EnumerableMapHarness.sol"
+    ],
+    "spec": "EnumerableMap"
+  },
+  {
+    "contract": "TimelockControllerHarness",
+    "files": [
+      "certora/harnesses/TimelockControllerHarness.sol"
+    ],
+    "options": [
+      "--optimistic_hashing",
+      "--optimistic_loop"
+    ],
+    "spec": "TimelockController"
+  },
+  {
+    "contract": "NoncesHarness",
+    "files": [
+      "certora/harnesses/NoncesHarness.sol"
+    ],
+    "spec": "Nonces"
+  }
+]

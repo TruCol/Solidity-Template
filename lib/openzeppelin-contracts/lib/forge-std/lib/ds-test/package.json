@@ -1,0 +1,15 @@
+{
+  "author": "Contributors to ds-test",
+  "bugs": "https://github.com/dapphub/ds-test/issues",
+  "description": "Assertions, equality checks and other test helpers ",
+  "files": [
+    "src/*"
+  ],
+  "license": "GPL-3.0",
+  "name": "ds-test",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dapphub/ds-test.git"
+  },
+  "version": "1.0.0"
+}
